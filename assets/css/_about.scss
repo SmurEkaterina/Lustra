@@ -1,0 +1,324 @@
+@import "mixins";
+
+body.about_school {
+  .container {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+
+.button.about {
+  font-size: 23px;
+  font-weight: 300;
+  border: 3px solid #00c0ba;
+  padding: 12px 34px;
+
+  &:hover {
+    color: #fff;
+    background: #00c0ba;
+  }
+}
+
+.about-intro {
+  background: url(../img/about/about-intro-bg.jpg) 50% 0 no-repeat;
+  background-size: cover;
+  padding: 160px 0;
+  margin-top: 90px;
+  min-height: 275px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.about-intro-info {
+  @include display(inline-block, top);
+  width: 410px;
+  text-align: left;
+  border-right: 4px solid #fff;
+  padding-right: 55px;
+
+  p {
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0;
+  }
+}
+
+.social-info {
+  margin-top: 20px;
+}
+
+.about_social_info_item {
+  display: none;
+
+  &:first-child {
+    display: block;
+  }
+}
+
+.social-networks {
+  @include display(inline-block, top);
+  width: 400px;
+  margin-left: 70px;
+  min-height: 275px;
+}
+
+.social-networks-menu {
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    margin: 1px;
+    padding: 8px 0;
+    width: 100px;
+
+    &.active {
+      border: 1px solid #fff;
+      margin: 0;
+    }
+
+    &:hover{
+      border: 1px solid #fff;
+      margin: 0;
+    }
+
+    a {
+      font-size: 16px;
+      font-weight: 300;
+      text-decoration: none;
+      color: #fff;
+
+    }
+  }
+}
+
+.about-intro-info-title {
+  font-size: 38px;
+  font-weight: 300;
+  margin-bottom: 37px;
+}
+
+.about-learning {
+  background: #fff;
+  padding-bottom: 80px;
+
+  .title_h2 {
+    margin: 55px 0 75px;
+  }
+
+  img {
+    vertical-align: top;
+    margin-top: 8px;
+  }
+
+  .button.about {
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+
+}
+
+.about-learning-menu {
+  margin-bottom: 45px;
+  display: inline-flex;
+
+  li {
+    padding: 10px 0;
+    text-align: center;
+    width: 241px;
+    position: relative;
+    border-right: 2px solid #00c0ba;
+    margin: 2px 0 2px 2px;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover {
+      border: 2px solid #00c0ba;
+      margin: 0;
+    }
+
+    a {
+      display: block;
+      color: #00c0ba;
+      font-size: 23px;
+      text-decoration: none;
+    }
+
+    &.active {
+      border: 2px solid #00c0ba;
+      margin: 0;
+    }
+  }
+
+}
+
+.about-learning-wrapper{
+  margin-bottom: 60px;
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+}
+
+.about-learning-info {
+  @include display(inline-block, middle);
+  text-align: left;
+  margin: 0 65px 0 0;
+  width: 420px;
+
+
+  p {
+    color: #404040;
+    font-size: 23px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+  }
+
+  ul {
+    li {
+      color: #404040;
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 23px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:before {
+        @include display(inline-block, middle);
+        content: "";
+        width: 6px;
+        height: 2px;
+        margin-right: 6px;
+        background: #404040;
+      }
+    }
+  }
+}
+
+.about-stat {
+  background: #00c0ba;
+  padding: 50px 35px;
+  min-height: 152px;
+
+  &.animated {
+    li {
+      animation-name: stat-anim;
+      animation-duration: 2s;
+    }
+  }
+
+  ul {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+    li {
+      color: #fff;
+
+      .value,
+      .about-stat-advanced-block{
+        @include display(inline-block, middle);
+        font-size: 103px;
+        font-weight: 100;
+      }
+
+      p {
+        font-size: 23px;
+        font-weight: 300;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@keyframes stat-anim {
+  0% {
+    margin-top: -30px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+
+}
+
+.about-partners {
+  background: #fff;
+  padding-bottom: 80px;
+
+}
+
+.about-partners-logo-block{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 90px;
+}
+
+.about-team {
+  background: #00c0ba;
+  padding-bottom: 60px;
+
+  .title_h2 {
+    margin-bottom: 80px;
+  }
+}
+
+.about-team-item-block {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-team-item {
+
+  .about-team-item-img {
+    border-radius: 50%;
+    width: 144px;
+    height: 144px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: 25px;
+    margin: 25px 0 0 0;
+  }
+
+  span {
+    font-size: 25px;
+    color: #80e0dd;
+  }
+
+  .social-button {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+    .social-button-facebook {
+      background: url(../img/about/about-social-icon-fb.png);
+      width: 11px;
+      height: 23px;
+    }
+
+    .social-button-twitter {
+      background: url(../img/about/about-social-icon-twitter.png);
+      width: 23px;
+      height: 23px;
+    }
+
+    a:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
